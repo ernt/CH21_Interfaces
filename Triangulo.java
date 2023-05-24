@@ -1,8 +1,10 @@
-public class Triangulo {
+public class Triangulo implements Figuras {
 	private String name;
 	private double base;
 	private double altura;
 	private double lado;
+	
+	
 	public Triangulo(String name, double base, double altura, double lado) {
 		this.name = name;
 		this.base = base;
@@ -10,9 +12,12 @@ public class Triangulo {
 		this.lado = lado;
 	}//Constructor
 	
+	@Override
 	public double calcularArea() {
 		return (getBase() * getAltura())/2;	
 	}//calcularArea
+	
+	@Override
 	public double calcularPerimetro() {
 		return (getLado() + getLado() + getLado());
 	}// calcularPerimetro
@@ -45,4 +50,7 @@ public class Triangulo {
 	public String toString() {
 		return "Triángulo [name=" + name + ", base=" + base + ", altura=" + altura + ", lado=" + lado + "]";
 	}//toString
+	
+	
+	
 }//class Triangulo
